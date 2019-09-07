@@ -7,7 +7,7 @@ For this homework, you will create a parser for command-line arguments. The code
 "-a", "ant", "-b", "bee", "-b", "bat", "cat", "-d", "-e", "elk", "-f"
 ```
 
-In this case, `-a` `-b` `-d` `-e` and `-f` are all flags since they start with a `-` dash followed by at least 1 non-whitespace character. The values are `ant` `bee` `bat` `cat` and `elk` since they do not start with a `-` and have at least 1 character. 
+In this case, `-a` `-b` `-d` `-e` and `-f` are all flags since they start with a `-` dash followed by at least 1 character. The values are `ant` `bee` `bat` `cat` and `elk` since they do not start with a `-` and have at least 1 character. 
 
 Not all flags have values, not all values have associated flags, and values will be overwritten if there are repeated flags. For example, flag `-a` has value `ant`. Flag `-b` has initial value `bee`, but the value get replaced by the second occurrence of the `-b` flag with the value `bat` instead. The value `cat` has no associated flag and is ignored. The flags `-d` and `-f` have no associated value, but are still stored by the argument parser. The resulting map should look similar to:
 
